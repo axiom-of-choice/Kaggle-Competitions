@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+import scipy as sp
 #%%
 filepath = "../datasets/ml-latest-small/"
 links = pd.read_csv(filepath + "links.csv")
@@ -35,5 +36,6 @@ plt.show()
 #%%
 plt.close()
 print(ratings['userId'].value_counts())
+sns.scatterplot(y = 'userId',x = 'rating',data = ratings, alpha = 0.5)
 plt.show()
 #%%
